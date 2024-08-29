@@ -22,7 +22,11 @@
 \usepackage[utf8]{inputenc}                                                           % Umlaute
 \usepackage[official]{eurosym}                                                        % Euro Symbol
 \usepackage[T1]{fontenc}													                                    % Umlaute auch richtig ausgeben
-\usepackage{newtxtext,newtxmath}                                                      % Font = Times New Roman
+\usepackage{float}
+\usepackage{newtxtext,newtxmath}    
+\usepackage{pgfplots}
+
+% Font = Times New Roman
 \usepackage{hyperref}
 \usepackage[nottoc]{tocbibind}
 \usepackage{fancyhdr}
@@ -146,7 +150,7 @@
   \include{pages/abkuerzungsverzeichnis}
   \include{pages/abbildungsverzeichnis}
   \include{pages/tabellenverzeichnis}
-  \include{pages/listingsverzeichnis}
+  % \include{pages/listingsverzeichnis}
   % \include{pages/vorwort}
 
 
@@ -160,8 +164,8 @@
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \include{chapter/Einleitung}
   \include{chapter/OT-Security}
-  \include{chapter/Asset_Inventory}
-  \include{chapter/PROFINET}
+  \include{chapter/Praxisprojekt}
+  \include{chapter/Fazit}
  
 
 
