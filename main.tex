@@ -21,22 +21,28 @@
 \usepackage[english, ngerman]{babel}                                                  % deutsche Silbentrennung
 \usepackage[utf8]{inputenc}                                                           % Umlaute
 \usepackage[official]{eurosym}                                                        % Euro Symbol
-\usepackage[T1]{fontenc}													                                    % Umlaute auch richtig ausgeben
+\usepackage[T1]{fontenc}	
+		                                    % Umlaute auch richtig ausgeben
 \usepackage{float}
 \usepackage{newtxtext,newtxmath}    
 \usepackage{pgfplots}
+\pgfplotsset{compat=1.18} 
 
 % Font = Times New Roman
 \usepackage{hyperref}
 \usepackage[nottoc]{tocbibind}
 \usepackage{fancyhdr}
 \usepackage{setspace}
-\usepackage[backend=bibtex, citestyle=authoryear, bibstyle=authoryear]{biblatex}      % Bibliothek für Zitate
+\usepackage[backend=biber, citestyle=authoryear, bibstyle=authoryear]{biblatex}      % Bibliothek für Zitate
+
+
 \usepackage{csquotes}                                                                 % Zusatzpacket für Zitate
 \usepackage{amsmath}                                                                  % Zurücksetzen der Tabellen- und Abbildungsnummerierung je Sektion
 \usepackage[labelfont=bf,aboveskip=1mm]{caption}                                      % Bild- und Tabellenunterschrift (fett)
 \usepackage[bottom,multiple,hang,marginal]{footmisc}                                  % Fußnoten [Ausrichtung unten, Trennung durch Seperator bei mehreren Fußnoten]
 \usepackage{graphicx}  
+
+
 \graphicspath{{./images/}}                                                            % Grafiken
 \usepackage[dvipsnames]{xcolor}                                                       % Farbige Buchstaben
 \usepackage{wrapfig}                                                                  % Bilder in Text integrieren
