@@ -19,7 +19,7 @@ PROFINET ist ein Industrial-Ethernet-Standard, der speziell für Anwendungen in 
 \item \textbf{CC-B} erweitert CC-A um Netzwerkdiagnose und Topologie-Informationen.
 \item \textbf{CC-C} umfasst eine Erweiterung zur Implementierung von IRT-Kommunikation\footnote{(Isochronous Real-Time Communication) synchronisiertes Übertragungsverfahren, das für den zyklischen Austausch von Daten zwischen PROFINET-Geräten verwendet wird}, die die Grundlage für taktsynchrone Anwendungen bildet.
 \item \textbf{CC-D} erweitert die Klasse C, indem es dieselben Dienste unter Verwendung der von IEEE (Institute of Electrical and Electronics Engineers) definierten Mechanismen des TSN (Time-Sensitive Networking) bereitstellt.
-\end{itemize} PROFINET nutzt ein einfaches 4-schichtiges TCP/IP-Modell. Der PROFINET INspektor® der Marke Indu-Sol überwacht und speichert teilnehmerbezogene Ereignisse in PROFINET-Netzwerken basierend auf vordefinierten Triggerfunktionen. Es handelt sich dabei um einen Netzwerksniffer, welcher den Datenverkehr in einer Netwzerkverbindung mitlesen kann und dessen Analyse ermöglicht.  Auf diese Art und Weise kann er spezifische Informationen wie IP-Adressen, Portnummern sowie den Inhalt übertragener Nachrichten erfassen. Diese Daten ermöglichen es, den Netzwerkverkehr im Detail zu verstehen, diesen zu überwachen und potenzielle Probleme frühzeitig zu erkennen (vgl. \cite{luber}). Die OT-Geräte-Attribute werden dabei über die XML-basierten GSDML-Dateien erfasst.  \ac{gsdml} ist eine Sprache zur Beschreibung von PROFINET IO-Feldgeräten. Ein Netzwerksniffer erfasst den Datenverkehr und identifiziert OT-Geräte. Sobald ein Gerät identifiziert wurde, kann der Sniffer die GSDML-Datei laden. Das ist möglich, da die GSDML-Dateien standardisiert sind und Attribute wie die Geräte-Identifikationsnumer enthalten. Schließlich kann der Sniffer diese GSDML-Dateien analysieren und die Ergebnisse in Form von OT-Geräte-Attributen (IP-Adresse, MAC-Adresse etc.) ausgeben (vgl. \cite{SIEMENS}). \clearpage \noindent Dabei liefert das Gerät wichtige Informationen zu Qualitätsmerkmalen wie Netzwerkbelastung, Datenfluss, Aktualisierungsintervallen, Lücken in der Übertragung und Schwankungen in den Telegrammzeiten, die den aktuellen Zustand der Kommunikationsqualität im Netzwerk darstellen. Ein solcher Qualitätscheck des PROFINET-Netzwerks, der diese Parameter berücksichtigt, ist nicht nur als Abnahme- und Prüfungsinstrument bei neuen Installationen von Bedeutung, sondern liefert auch wertvolle Daten für die Wartung, Instandhaltung und den (Remote-)Service. Der integrierte Webserver bietet die Möglichkeit, die Netzwerkdaten übersichtlich darzustellen (vgl. \cite{InduSol}).
+\end{itemize} PROFINET nutzt ein 4-schichtiges TCP/IP-Modell. Der PROFINET INspektor® der Marke Indu-Sol überwacht und speichert teilnehmerbezogene Ereignisse in PROFINET-Netzwerken basierend auf vordefinierten Triggerfunktionen. Es handelt sich dabei um einen Netzwerksniffer, welcher den Datenverkehr in einer Netzwerkverbindung mitlesen kann und dessen Analyse ermöglicht.  Auf diese Art und Weise kann er spezifische Informationen wie IP-Adressen, Portnummern sowie den Inhalt übertragener Nachrichten erfassen. Diese Daten ermöglichen es, den Netzwerkverkehr im Detail zu verstehen, diesen zu überwachen und potenzielle Probleme frühzeitig zu erkennen (vgl. \cite{luber}). Die OT-Geräte-Attribute werden dabei über die XML-basierten GSDML-Dateien erfasst.  \ac{gsdml} ist eine Sprache zur Beschreibung von PROFINET IO-Feldgeräten. Ein Netzwerksniffer erfasst den Datenverkehr und identifiziert OT-Geräte. Sobald ein Gerät identifiziert wurde, kann der Sniffer die GSDML-Datei laden. Das ist möglich, da die GSDML-Dateien standardisiert sind und Attribute wie die Geräte-Identifikationsnumer enthalten. Schließlich kann der Sniffer diese GSDML-Dateien analysieren und die Ergebnisse in Form von OT-Geräte-Attributen (IP-Adresse, MAC-Adresse etc.) ausgeben (vgl. \cite{SIEMENS}). \clearpage \noindent Dabei liefert das Gerät wichtige Informationen zu Qualitätsmerkmalen wie Netzwerkbelastung, Datenfluss, Aktualisierungsintervallen, Lücken in der Übertragung und Schwankungen in den Telegrammzeiten, die den aktuellen Zustand der Kommunikationsqualität im Netzwerk darstellen. Ein solcher Qualitätscheck des PROFINET-Netzwerks, der diese Parameter berücksichtigt, ist nicht nur als Abnahme- und Prüfungsinstrument bei neuen Installationen von Bedeutung, sondern liefert auch wertvolle Daten für die Wartung, Instandhaltung und den (Remote-)Service. Der integrierte Webserver bietet die Möglichkeit, die Netzwerkdaten übersichtlich darzustellen (vgl. \cite{InduSol}).
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.29\textwidth]{images/PROFINET-INspektor.jpg}
@@ -31,7 +31,7 @@ Zu den Hauptfunktionen zählen das Asset-Management, die Überprüfung von Gerä
 
 \subsection{Analyse und Bewertung der Ergebnisse}
 
-DPM und Indu-Sol haben die OT-Geräte-Attribute MAC-Adresse, IP-Adresse, Name, Gerätetyp, Bestellnummer, Hardware-Version, Firmware-Version, Subnetz, Gateway und Seriennummer erfasst. Die Werte wurden über die Weboberfläche der jeweiligen Sniffer erfasst und in einer Excel-Tabelle verglichen. Bei der Auswertung stellt man fest, dass beide Systeme grundsätzlich hohe Erkennungsgrade aufweisen.  Bei der Erfassung von Insgesamt 97 OT-Geräten erfasst DPM in der Summe jedoch 13,92\%\ mehr Daten als der PROFINET Inspektor von Indu-Sol. 
+DPM und Indu-Sol haben die OT-Geräte-Attribute MAC-Adresse, IP-Adresse, Name, Gerätetyp, Bestellnummer, Hardware-Version, Firmware-Version, Subnetz, Gateway und Seriennummer erfasst. Die Werte wurden über die Weboberfläche der jeweiligen Sniffer identifiziert und in einer Excel-Tabelle verglichen. Bei der Auswertung stellt man fest, dass beide Systeme grundsätzlich hohe Erkennungsgrade aufweisen.  Bei der Erfassung von Insgesamt 97 OT-Geräten erfasst DPM in der Summe jedoch 13,92\%\ mehr Daten als der PROFINET Inspektor von Indu-Sol. 
 Die Kompetenzen der beiden Systeme sind dennoch unterschiedlich verteilt. Hervorzuheben ist auch, dass der PROFINET Inspektor keine Seriennummern erfasst hat. Bei Außerachtlassung dieses Attributs, würde diese Diskrepanz bei 0,4\%\ liegen, wodurch beide Systeme über einen vergleichbaren Erkennungsgrad verfügen würden.  
 
 
@@ -71,12 +71,69 @@ Die Kompetenzen der beiden Systeme sind dennoch unterschiedlich verteilt. Hervor
         
         \end{axis}
     \end{tikzpicture}
-    \caption{Vergleich des Erkennungsgrads zwischen DPM und Indu-Sol.}
+    \caption{Vergleich des Erkennungsgrads zwischen DPM und Indu-Sol}
     \label{fig:vergleich}
 \end{figure}
 \bigskip 
 
-\noindent Die größten Unterscheidungen treten hierbei in der Kategorie Gerätetyp auf, wobei DPM einen 10\%\ höheren Erkennungsgrad aufweist. Auch bei der Qualität der Daten weist das Gerät von Indu-Sol in dieser Kategorie große Defizite auf. Zwar erkennt Indu-Sol die Geräte, jedoch fehlen häufig genauere Bezeichnungen, die DPM wiederum registriert. Zu Beispielen gehören die Siemens \ac{sps}, die vom DPM als CPU319F-3 PN/DP und vom Indu-Sol lediglich als S7-300 registriert werden. Die Festo Terminals werden vom DPM als CPX-FO Rev 20 und vom Indu-Sol als Festo CPX-Terminal gedeutet. Im Hinblick auf OT-Security kann die exakte Modellbezeichnung von großer Bedeutung sein: Sicherheitsupdates werden häufig nur für spezielle Modelle veröffentlicht. Die genaue Bezeichnung gibt daher die Sicherheit, dass Updates auch tatsächlich für das entsprechende OT-Gerät geeignet sind. So werden auch Komplikationen und Fehler bei der Anwendung von Updates vermieden. Schwachstellen, die seitens des Herstellers für eine genaue Modellreihe bekanntgegeben werden, können so schneller innerhalb der OT-Geräte identifiziert und behoben werden. Insgesamt sind Risiken mithilfe der genauen Modellbezeichnung also deutlich besser zu bewerten, da man dadurch schnell feststellen kann, welche Schwachstellen für ein spezifisches Modell existieren und entsprechende Anpassungen vornehmen kann. Dies hilft auch dabei Übersichten über die eingesetzten Systeme zu erstellen. Bestimmte Geräte werden vom PROFINET Insepktor dahingehend gar nicht erkannt, wozu beispielsweise Janitza Energiemessgeräte gehören. Die Ursachen können verschieden sein. Geräte übertragen ihre Daten unter Umständen nur in Intervallen. Aus diesem Grund kann es passieren, dass der PROFINET Inspektor OT-Geräte nicht registriert, da innerhalb des Überwachungszeitraums keine Daten übertragen wurden. Speziell bei Energiemessgeräten ist dies durchaus vorstellbar. Da der DPM teilweise aktive Scanning Methoden nutzt und daher direkt Anfragen versendet, könnte sich so erklären lassen, warum manche OT-Geräte vom Indu-Sol-System nicht erkannt werden, da dieses nur passiv agiert. Des Weiteren ist der PROFINET Inspektor für Netzwerkverkehr konzipiert, der das PROFINET-Kommunikationsprotokoll nutzt. Nutzen OT-Geräte also andere Protokolle (z.B. Ethernet), können diese nicht erfasst werden. DPM kann verschiedene Protokolltypen erkennen, wozu Modbus, OPC UA oder auch Ethernet gehören. Aufgrund dieser Tatsache ist der Erkennungsbereich des DPM deutlich größer. OT-Geräte können speziellen Konfigurationen unterliegen, was sie nicht erkennbar macht. Unterschiedliche Algorithmen und Techniken zur Identifizierung von OT-Geräte-Attributen, die in den Sniffern genutzt werden, können diese Abweichungen ebenso hervorrufen.
+\noindent Die größten Unterscheidungen treten hierbei in der Kategorie Gerätetyp auf, wobei DPM einen 10\%\ höheren Erkennungsgrad aufweist. Auch bei der Qualität der Daten weist das Gerät von Indu-Sol in dieser Kategorie große Defizite auf. Zwar erkennt Indu-Sol die Geräte, jedoch fehlen häufig genauere Bezeichnungen, die DPM wiederum registriert. Zu Beispielen gehören die Siemens \ac{sps}, die vom DPM als CPU319F-3 PN/DP und vom Indu-Sol lediglich als S7-300 registriert werden. Die Festo Terminals werden vom DPM als CPX-FO Rev 20 und vom Indu-Sol als Festo CPX-Terminal gedeutet. In 95,5\%\ der Fälle erfässt das DPM wesentlich bessere Daten als Indu-Sol in der Kategorie Gerätetyp. Dieser Wert entsteht nach Abzug der von DPM generisch erfassten Geräte, da diese Daten hinsichtlich der OT-Security keinen Nutzen erfüllen. Im Hinblick auf OT-Security kann die exakte Modellbezeichnung von großer Bedeutung sein: Sicherheitsupdates werden häufig nur für spezielle Modelle veröffentlicht. Die genaue Bezeichnung gibt daher die Sicherheit, dass Updates auch tatsächlich für das entsprechende OT-Gerät geeignet sind. So werden auch Komplikationen und Fehler bei der Anwendung von Updates vermieden. Schwachstellen, die seitens des Herstellers für eine genaue Modellreihe bekanntgegeben werden, können so schneller innerhalb der OT-Geräte identifiziert und behoben werden. Insgesamt sind Risiken mithilfe der genauen Modellbezeichnung also deutlich besser zu bewerten. Dies hilft auch dabei Übersichten über die eingesetzten Systeme zu erstellen. Bestimmte Geräte werden vom PROFINET Inspektor dahingehend gar nicht erkannt, wozu beispielsweise Janitza Energiemessgeräte gehören. 
+\bigskip
+
+\begin{table}[h]
+\centering
+\caption{Vergleich der Datenqualität in Kategorie Gerätetyp (exemplarisch)}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{DPM} & \textbf{PROFINET Inspektor} \\
+\hline
+SCALANCE XF208 & SCALANCE X-200 \\
+\hline
+SCALANCE X202-2P IRT & SCALANCE X-200 \\
+\hline
+SIMATIC IM151-3 PN HF V7.0 & IM151-3\\
+\hline
+DataMan 260 & DataMan \\
+\hline
+Robot ENERGY V1.2 & robot device \\
+\hline
+EX245-RPN1-A-X52 &SMC EX245 \\
+\hline
+MVK DI8 DO8 POF IRT & MVK-MPNIO \\
+\hline
+X20IF10E3-1 & PNS \\
+\hline
+SIMATIC HMI KP8 PN 8KEYS  & KP8 PN 8KEYS 8DI/O DC24Ve \\
+\hline
+SIMATIC MP377 15 Touch Multi Panel & HMI \\
+\hline
+\end{tabular}
+\label{tab:beispiel}
+\end{table}
+
+\bigskip 
+\noindent Lediglich der Gerätetyp KP8 PN 8KEYS 8DI/O DC24V erfasst das Indu-Sol genauer. Umzu verdeutlichen, das eine exakte Angabe dieses Attributs bedeutend ist, kann man einen Abgleich mit einer CVE-Datenbank durchführen. Dabei handelt es sich um eine umfassende Sammlung von Sicherheitslücken, die in Softwareprodukten und -systemen identifiziert wurden. Sucht man nun beispielsweise den vom Indu-Sol Gerät erkannten SCALANCE X-200 Switch von Siemens, werden Schwachstellen erkannt und der Hersteller gibt Handlungsvorschläge an. Allerdings gelten diese immer für spezifische Modelle und selten für eine ganze Modellfamilie. In diesem Beispiel geht es um eine "BadAlloc Vulnerability". Beim Scalance XF208 gilt die Aufforderung: 
+
+\clearpage
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/SCALANCEXF208.PNG}
+    \caption{SCALANCE XF208 (\cite{SIEMENS1})}
+    \label{fig:scalancexf208}
+\end{figure}
+
+
+
+\noindent Für dieses OT-Gerät soll also ein Update mindestens auf die Firmware-Version V5.2.6 erfolgen, um die Schwachstelle zu beheben. Betrachtet man nun das OT-Gerät SCALANCE X202-2P IRT wird folgendes empfohlen:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/SCALANCEX202-2PIRT.PNG}
+    \caption{SCALANCE X202-2P IRT (\cite{SIEMENS1})}
+    \label{fig:scalancex2022pirt}
+\end{figure}
+
+
+\noindent Bei diesem Switch wiederum wird nahegelegt, ein Update auf die Firmware-Version V5.5.2 durchzuführen. Das heißt, dass die pauschale Nennung der Modellfamilie nicht ermöglicht, die Schwachstelle zu beseitigen. Da der PROFINET Inspektor verschiedenen Geräten einer Modellreihe die gleiche Bezeichnung zuordnet (SCALANCE X-200), ist es nicht möglich zu erkennen, dass es sich bei beiden IP-Adressen, die gleich bezeichnet sind um verschiedene OT-Geräte handelt. Man muss also bei beiden Geräten unterschiedlich vorgehen, um die Schwachstelle zu beseitigen. Neben dem Gerätetyp spielt auch die Firmware-Version eine besondere Rolle. Dieses Attribut weist bei beiden Geräten vergleichsweise niedrige Erkennungsgrade auf. Dabei ist diese von besonderer Bedeutung hinsichtlich des Patch-Managements. Das Indu-Sol System erkennt 3,1\%\ mehr Firmware Versionen in diesem Attribut. Hinsichtlich der Datenqualität zeigt der PROFINET-Inspektor tendenziell eine höhere Leistungsfähigkeit. Die Ursachen können verschieden sein. Geräte übertragen ihre Daten unter Umständen nur in Intervallen. Aus diesem Grund kann es passieren, dass der PROFINET Inspektor OT-Geräte nicht registriert, da innerhalb des Überwachungszeitraums keine Daten übertragen wurden. Speziell bei Energiemessgeräten ist dies durchaus vorstellbar. Da der DPM teilweise aktive Scanning Methoden nutzt und daher direkt Anfragen versendet, könnte sich so erklären lassen, warum manche OT-Geräte vom Indu-Sol-System nicht erkannt werden, da dieses nur passiv agiert. Des Weiteren ist der PROFINET Inspektor für Netzwerkverkehr konzipiert, der das PROFINET-Kommunikationsprotokoll nutzt. Nutzen OT-Geräte also andere Protokolle (z.B. Ethernet), können diese nicht erfasst werden. DPM kann verschiedene Protokolltypen erkennen, wozu Modbus, OPC UA oder auch Ethernet gehören. Aufgrund dieser Tatsache ist der Erkennungsbereich des DPM deutlich größer. OT-Geräte können speziellen Konfigurationen unterliegen, was sie nicht erkennbar macht. Unterschiedliche Algorithmen und Techniken zur Identifizierung von OT-Geräte-Attributen, die in den Sniffern genutzt werden, können diese Abweichungen ebenso hervorrufen. So nutzt DPM die in 3.3 erwähnten GSDML-Dateien, die zuverlässigere Ergebnisse liefern.
 
 \bigskip
 \noindent Zusammenfassend lässt sich feststellen, dass sowohl das Indu-Sol-Gerät als auch der DPM hohe Erkennungsgrade erzielen können. Die Unterscheidung über die Qualität der Netzwerksniffer liegt jedoch in der Datenqualität. Während DPM in vielen Fällen genaue Modellbezeichnungen der OT-Geräte liefert, erfasst der Profinet Inspektor häufig allgemeinere Informationen, was hinsichtlich von OT-Sicherheitsaspekten sehr relevant ist. Sowohl DPM als auch der PROFINET Inspektor erkennen OT-Geräte, die vom jeweils anderen Sniffer nicht erfasst werden. Dadurch bietet die Kombination beider Tools eine umfassendere Sicht auf das Netzwerk. Insgesamt gesehen kann DPM jedoch vielfältiger eingesetzt werden, da dieser auf verschiedenen Protokollebenen auch außerhalb des PROFINET arbeiten kann. Ein weiteres Sicherheitsrisiko ergibt sich bei Indu-Sol durch die Kooperation mit einer externen Firma. Durch die Webanwendung, in der alle OT-Geräte-Attribute inklusive IP-Adressen gelistet werden, besteht die Möglichkeit, dass unbefugte an die Daten gelangen, was ein enormes Risiko für die Produktion bedeuten kann. Ein Hindernis bei DPM ist wiederum, dass die Datenübertragung zwischen Endanwender und Server nicht verschlüsselt ist und nur HTTP nutzt. Alle Daten, sowohl bei der Übertragung als auch bei der Speicherung, sollten durch starke Verschlüsselungsmechanismen geschützt werden und es muss sichergestellt werden, dass nur autorisierte Benutzer Zugang zur Webanwendung haben.
