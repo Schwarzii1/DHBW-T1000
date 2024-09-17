@@ -23,6 +23,8 @@
 %Terminalausgabe
 \usepackage{minted}
 % Umlaute
+\usepackage{subcaption}
+
 \usepackage[official]{eurosym}                                                        % Euro Symbol
 \usepackage[T1]{fontenc}	
 		                                    % Umlaute auch richtig ausgeben
@@ -45,7 +47,14 @@
 \usepackage[bottom,multiple,hang,marginal]{footmisc}                                  % Fußnoten [Ausrichtung unten, Trennung durch Seperator bei mehreren Fußnoten]
 \usepackage{graphicx}  
 
-
+%ZITATTIONSSTIL
+\DeclareCiteCommand{\cite}
+  {\usebibmacro{prenote}}
+  {\printnames{labelname} \printtext{, }\printfield{year}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
+%ZITATTIONSSTIL
+  
 \graphicspath{{./images/}}                                                            % Grafiken
 \usepackage[dvipsnames]{xcolor}                                                       % Farbige Buchstaben
 \usepackage{wrapfig}                                                                  % Bilder in Text integrieren
@@ -157,11 +166,14 @@
   \include{pages/titel}
   % \include{pages/sperrvermerk}
   \include{pages/selbststaendigkeitserklaerung}
-  \include{pages/abstract}
+    \include{pages/abkuerzungsverzeichnis}
+     \include{pages/abbildungsverzeichnis}
+
+     \include{pages/tabellenverzeichnis}
   \include{pages/inhaltsverzeichnis}
-  \include{pages/abkuerzungsverzeichnis}
-  \include{pages/abbildungsverzeichnis}
-  \include{pages/tabellenverzeichnis}
+
+ 
+  
   % \include{pages/listingsverzeichnis}
   % \include{pages/vorwort}
 
@@ -197,5 +209,5 @@
   \renewcommand{\thelstlisting}{\Alph{section}.\arabic{lstlisting}}
   \pagenumbering{Alph}
 
-  \include{pages/anhang}
+ % \include{pages/anhang}
 \end{document}
